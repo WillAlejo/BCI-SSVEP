@@ -197,24 +197,11 @@ for li = 1:10
     obj = System.Speech.Synthesis.SpeechSynthesizer;
     obj.Volume = 100;
     
-    %if 
-Predecir = [6 7.5 7.5 6 7.5 6 6 6.5 6 6];
-Predecir2 = Predecir(1,li);
-    %xlk = num2str(Predecir1);
-    if Predecir2 == 6
-        xlk = "¿cómo te encuentras";
-    elseif Predecir2 == 7.5
-        xlk = "Tengo hambre";
-    elseif Predecir2 == 8
-        xlk = "Hola";
-    elseif Predecir2 == 6.5
-        xlk = "¡Quiero ir al baño!";
-    end
+    xlk = num2str(Predecir1);
     
     Speak(obj, xlk);
 
     disp(xlk);
-
 
     %WaitSecs(0.1);
 
